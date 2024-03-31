@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 import { Button, Icon } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { signOut } from "firebase/auth";
+import titlesDetails from "./data.js";
+import { useEffect } from "react";
 
 function delayFunction(delay) {
   return new Promise((resolve, reject) => {
@@ -36,6 +38,8 @@ function CardDisplay() {
   const handleNavigate = async (path) => {
     navigate(path);
   };
+  let titlesWithDetails = [];
+
   const handleLogout = async () => {
     try {
       await signOut(auth);
@@ -59,25 +63,31 @@ function CardDisplay() {
       });
     }
   };
-  const [careerData, setCareerData] = useState([
-    { Title: "title3", Description: "description1" },
-    { Title: "title4", Description: "description2" },
-    { Title: "title5", Description: "description3" },
-  ]);
 
-  const [swipeStack, setSwipeStack] = useState([
-    { Title: "title1", Description: "description1" },
-    { Title: "title2", Description: "description2" },
-  ]);
+  const [careerData, setCareerData] = useState([]);
+
+  const [swipeStack, setSwipeStack] = useState([]);
+
+  useEffect(() => {
+    // This code will run once when the component mounts
+    console.log(titlesDetails.titles);
+    console.log(titlesDetails.details);
+
+    titlesWithDetails = titlesDetails.titles.map((title, index) => ({
+      Title: title,
+      Description: titlesDetails.details[index].response,
+    }));
+    console.log(titlesWithDetails.slice(2));
+    console.log(titlesWithDetails.slice(0, 2));
+
+    setCareerData(titlesWithDetails.slice(2));
+    setSwipeStack(titlesWithDetails.slice(0, 2));
+
+    // Clean-up function (optional)
+    return () => {};
+  }, []);
+
   const gettingMatches = () => {
-    delayFunction(3000).then(() => {
-      setCareerData([
-        { Title: "title6", Description: "description1" },
-        { Title: "title7", Description: "description2" },
-        { Title: "title8", Description: "description3" },
-      ]);
-    });
-    
     return (
       <div>
         <Text fontSize="3xl">
@@ -234,8 +244,12 @@ function CardDisplay() {
                 <li class="nav-item">
                   <a class="nav-link px-4" href="#">
                     <StarIcon />
-                    <Text fontSize="3xl" onClick={() => handleNavigate("/profile")}>Profile</Text>
-
+                    <Text
+                      fontSize="3xl"
+                      onClick={() => handleNavigate("/profile")}
+                    >
+                      Profile
+                    </Text>
                   </a>
                 </li>
               </ul>
@@ -245,7 +259,8 @@ function CardDisplay() {
             <Button
               onClick={handleLogout}
               rightIcon={<ArrowForwardIcon />}
-              bg="#FFD700" color="white"
+              bg="#FFD700"
+              color="white"
               _hover={{ bg: "#FFF176", color: "white" }}
               variant="solid"
             >

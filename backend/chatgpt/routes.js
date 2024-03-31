@@ -19,18 +19,15 @@ async function chatGPTResponse(message) {
   }
 }
 
-
-
-
 // Define Express route handler for /chatgpt endpoint
 function chatGPTRoutes(app) {
-  app.post('/chatgpt', async (req, res) => {
+  app.post("/chatgpt", async (req, res) => {
     const { message } = req.body;
     const response = await chatGPTResponse(message);
     res.json({ response });
   });
 
-  app.post('/image', async (req, res) => {
+  app.post("/image", async (req, res) => {
     const { message } = req.body;
     try {
       // Hypothetical updated method for image generation
@@ -40,7 +37,7 @@ function chatGPTRoutes(app) {
         n: 1,
         size: "1024x1024",
       });
-  
+
       const imageUrl = response.data[0].url; // Adjust based on actual response structure
       res.json({ imageUrl });
     } catch (error) {
@@ -48,11 +45,6 @@ function chatGPTRoutes(app) {
       res.status(500).send("Error generating image");
     }
   });
-
 }
-
-
-
-
 
 export default chatGPTRoutes;

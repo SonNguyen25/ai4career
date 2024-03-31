@@ -7,6 +7,7 @@ import "./Login.css";
 import "@fontsource/poppins/700.css";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
+import titlesDetails from "./data.js";
 
 const Questions = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const Questions = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onProfileSubmit(profile); 
+    onProfileSubmit(profile);
     console.log(profile);
   };
 
@@ -115,13 +116,13 @@ const Questions = () => {
         message: bodyResponse,
       });
 
-      console.log(response.data);
+      const data = response.data;
     } catch (error) {
       console.error("API Error");
     }
 
     const responseList = response.data.response.split("\n");
-
+    titlesDetails.titles = responseList;
     var modifiedList = "";
 
     const makeRequests = async () => {
@@ -143,7 +144,7 @@ const Questions = () => {
 
         // Wait for all the requests to complete
         const results = await Promise.all(requests);
-
+        titlesDetails.details = results.map((result) => result.data);
         // 'results' is an array of Axios responses
         console.log(results.map((result) => result.data)); // Example of accessing each response's data
         toast({
