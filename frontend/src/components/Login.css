@@ -1,0 +1,76 @@
+.my-custom-hover:hover {
+  background-color: #cca700;
+  border-color: #cca700;
+  color: black;
+}
+
+.custom-btn {
+  background-color: #ffd700;
+  border: none;
+  margin-right: 10px;
+  color: black;
+}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Use the full height of the viewport */
+}
+
+.btn-next {
+  margin-top: 20px; /* Add some space above the button */
+  font-size: 30px;
+  
+}
+
+.typewriter {
+  font-size: 50px; /* Set the font size */
+}
+
+@media (max-width: 600px) {
+    .typewriter {
+      font-size: 50px; /* Slightly larger font size for very small screens */
+    }
+  }
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .typewriter {
+    overflow: hidden;
+    font-size: 4vw; 
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    max-width: 910px;
+}
+
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+  
+@keyframes flyInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.flyInText {
+  animation: flyInFromLeft 1s ease-out;
+}
