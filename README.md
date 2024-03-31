@@ -1,5 +1,5 @@
-# ai4Career - Personal Career Advisor
-
+# ai4Career - Personal Career Advisor 
+# 2nd Place in innovaite AINU x BAIC Hackathon
 ## Overview
 
 AI4Career is a student for student project, it leverages cutting-edge AI technology to provide personalized, insightful career advice and academic planning support to students at crucial junctures of their educational journey. Targeted at high school students applying to university, first-year university students, and those uncertain about their career paths, AI4Career aims to demystify the process of making informed decisions regarding education and career.
@@ -52,5 +52,11 @@ npm install
 # Start the server 
 npm start
 ```
-
+## Contributions
+- Son Nguyen - Full Stack (Frontend, Backend, Database)
+- Khoi Ngo - Backend
+- Jonathan Sudarpo - Backend, Prompt Engineer
+- Vidyut Ramanan - Frontend
+- Yuxi Zhou - Designer
+- Nikita Sopochkin - Presenter, Financial + Ethics Analyst
 
