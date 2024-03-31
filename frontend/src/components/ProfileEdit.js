@@ -164,14 +164,14 @@ const ProfileEdit = () => {
 
     makeRequests();
 
-    var responseImage = [];
+    // var responseImage = [];
 
-    const url = `http://localhost:4000/image`;
-    const responseIMG = await axios.post(url, {
-      message: "Man working in the software engineering",
-    });
+    // const url = `http://localhost:4000/image`;
+    // const responseIMG = await axios.post(url, {
+    //   message: "Man working in the software engineering",
+    // });
 
-    console.log(responseIMG);
+    // console.log(responseIMG);
   };
 
   useEffect(() => {
