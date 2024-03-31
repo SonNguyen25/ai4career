@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI4Career leverages cutting-edge AI technology to provide personalized, insightful career advice and academic planning support to students at crucial junctures of their educational journey. Targeted at high school students applying to university, first-year university students, and those uncertain about their career paths, AI4Career aims to demystify the process of making informed decisions regarding education and career.
+AI4Career is a student for student project, it leverages cutting-edge AI technology to provide personalized, insightful career advice and academic planning support to students at crucial junctures of their educational journey. Targeted at high school students applying to university, first-year university students, and those uncertain about their career paths, AI4Career aims to demystify the process of making informed decisions regarding education and career.
 
 ## Target Audience
 
@@ -40,3 +40,17 @@ cd backend
 npm install
 # Start the server (provide specific commands)
 npm start
+```
+For frontend:
+```bash
+
+# Navigate to the project directory
+cd frontend
+
+# Install dependencies (specify commands based on your tech stack)
+npm install
+# Start the server (provide specific commands)
+npm start
+```
+
+
