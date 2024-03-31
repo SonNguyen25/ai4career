@@ -36,9 +36,9 @@ git clone ...
 # Navigate to the project directory
 cd backend
 
-# Install dependencies (specify commands based on your tech stack)
+# Install dependencies 
 npm install
-# Start the server (provide specific commands)
+# Start the server 
 npm start
 ```
 For frontend:
@@ -47,9 +47,9 @@ For frontend:
 # Navigate to the project directory
 cd frontend
 
-# Install dependencies (specify commands based on your tech stack)
+# Install dependencies 
 npm install
-# Start the server (provide specific commands)
+# Start the server 
 npm start
 ```
 
