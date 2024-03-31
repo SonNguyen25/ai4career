@@ -73,10 +73,15 @@ function CardDisplay() {
     console.log(titlesDetails.titles);
     console.log(titlesDetails.details);
 
-    titlesWithDetails = titlesDetails.titles.map((title, index) => ({
-      Title: title,
-      Description: titlesDetails.details[index].response,
-    }));
+    const titlesWithDetails = titlesDetails.titles.map((title, index) => {
+      const description = titlesDetails.details[index].response;
+      // Parse the description into sections
+      const parsedDescription = parseDescription(description);
+      return {
+        Title: title,
+        Description: parsedDescription,
+      };
+    });
     console.log(titlesWithDetails.slice(2));
     console.log(titlesWithDetails.slice(0, 2));
 
@@ -86,6 +91,26 @@ function CardDisplay() {
     // Clean-up function (optional)
     return () => {};
   }, []);
+
+  function parseDescription(description) {
+    const parts = description.split(":").map(part => part.trim());
+
+    return {
+      jobDetails: parts.length > 1 ? parts[1].split("\n")[0].trim() : '',
+      userProfile: parts.length > 2 ? parts[2].split("\n")[0].trim() : '',
+      qualifications: parts.length > 3 ? parts[3].split("\n")[0].trim() : '',
+    };
+}
+
+
+  // Render function for the parsed description
+  const renderDescription = (description) => (
+    <>
+      <div><strong>Job Details:</strong> {description.jobDetails}</div>
+      <div><strong>User Profile Match:</strong> {description.userProfile}</div>
+      <div><strong>Qualifications:</strong> {description.qualifications}</div>
+    </>
+  );
 
   const gettingMatches = () => {
     return (
@@ -301,7 +326,7 @@ function CardDisplay() {
                           <div class="d-flex justify-content-center align-items-center">
                             <JobCard
                               title={data.Title}
-                              description={data.Description}
+                              description={renderDescription(data.Description)}
                             />
                           </div>
                         </div>
