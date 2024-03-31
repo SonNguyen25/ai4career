@@ -59,7 +59,7 @@ const Login = () => {
           isClosable: true,
           duration: 3000,
         });
-        navigate("/questions");
+        
       })
       .catch((error) => {
         console.error(error.message);
@@ -101,7 +101,7 @@ const Login = () => {
           description: "You're logged in!",
           status: "success",
         });
-        navigate("/questions");
+        
       })
       .catch((error) => {
         const errorCode = error.code;
