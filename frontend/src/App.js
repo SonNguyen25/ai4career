@@ -8,21 +8,45 @@ import Questions from "./components/Questions";
 import Register from "./components/Register";
 import { AuthProvider } from "./contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoutes";
+import ProfileEdit from "./components/ProfileEdit";
+import CardDisplay from "./components/CardDisplay";
+
 
 function App() {
   return (
     <ChakraProvider>
       <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Login />} />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Login />} />
 
-          <Route path="/questions" element={<ProtectedRoute>
+            <Route
+              path="/questions"
+              element={
+                <ProtectedRoute>
                   <Questions />
-                </ProtectedRoute>} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Router>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <ProfileEdit />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/main"
+              element={
+                <ProtectedRoute>
+                  <CardDisplay />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </Router>
       </AuthProvider>
     </ChakraProvider>
   );

@@ -5,8 +5,12 @@ import { db } from "../services/firebase/config.js";
 import axios from "axios";
 import "./Login.css";
 import "@fontsource/poppins/700.css";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@chakra-ui/react";
 
 const Questions = () => {
+  const navigate = useNavigate();
+  const toast = useToast();
   const [showIntro, setShowIntro] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0); // State to track current question index
   const [profile, setProfile] = useState({
@@ -54,7 +58,7 @@ const Questions = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onProfileSubmit(profile); // Placeholder function, replace with actual submission logic
+    onProfileSubmit(profile); 
     console.log(profile);
   };
 
@@ -142,8 +146,23 @@ const Questions = () => {
 
         // 'results' is an array of Axios responses
         console.log(results.map((result) => result.data)); // Example of accessing each response's data
+        toast({
+          title: "Profile update successfully!",
+          description: `Information updated!`,
+          status: "success",
+          isClosable: true,
+          duration: 3000,
+        });
+        navigate("/main");
       } catch (error) {
         console.error("Error making requests:", error);
+        toast({
+          title: "Profile update error!",
+          description: `Please try again!`,
+          status: "error",
+          isClosable: true,
+          duration: 3000,
+        });
       }
     };
 

@@ -7,6 +7,7 @@ import { Center, Heading, Text, Button } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import "@fontsource/poppins/700.css";
 import "./Login.css";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 import {
   getAuth,
@@ -18,6 +19,7 @@ import {
 
 const Login = () => {
   const navigate = useNavigate();
+  const db = getFirestore(app);
   const toast = useToast();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,6 +39,19 @@ const Login = () => {
         // The signed-in user info.
         const user = result.user;
         console.log(user);
+        const userRef = doc(db, "users", user.uid);
+
+        const checkUser = async () => {
+          const docSnap = await getDoc(userRef);
+
+          if (docSnap.exists()) {
+            navigate("/main");
+          } else {
+            navigate("/questions");
+          }
+        };
+
+        checkUser();
         toast({
           title: "Log in with Google successfully!",
           description: `Welcome, ${user.displayName}`,
@@ -68,6 +83,19 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         console.log("You're logged in!");
+        const userRef = doc(db, "users", user.uid);
+
+        const checkUser = async () => {
+          const docSnap = await getDoc(userRef);
+
+          if (docSnap.exists()) {
+            navigate("/main");
+          } else {
+            navigate("/questions");
+          }
+        };
+
+        checkUser();
         toast({
           title: "Login Successfully!",
           description: "You're logged in!",
