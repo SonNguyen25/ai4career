@@ -113,6 +113,7 @@ const ProfileEdit = () => {
       });
 
       console.log(response.data);
+      const data = response.data;
     } catch (error) {
       console.error("API Error");
     }
@@ -144,21 +145,21 @@ const ProfileEdit = () => {
         // 'results' is an array of Axios responses
         console.log(results.map((result) => result.data)); // Example of accessing each response's data
         toast({
-            title: "Profile update successfully!",
-            description: `Information updated!`,
-            status: "success",
-            isClosable: true,
-            duration: 3000,
-          });
+          title: "Profile update successfully!",
+          description: `Information updated!`,
+          status: "success",
+          isClosable: true,
+          duration: 3000,
+        });
       } catch (error) {
         console.error("Error making requests:", error);
         toast({
-            title: "Profile update error!",
-            description: `Please try again!`,
-            status: "error",
-            isClosable: true,
-            duration: 3000,
-          });
+          title: "Profile update error!",
+          description: `Please try again!`,
+          status: "error",
+          isClosable: true,
+          duration: 3000,
+        });
       }
     };
 
@@ -265,7 +266,8 @@ const ProfileEdit = () => {
             <Button
               onClick={handleLogout}
               rightIcon={<ArrowForwardIcon />}
-              bg="#FFD700" color="white"
+              bg="#FFD700"
+              color="white"
               _hover={{ bg: "#FFF176", color: "white" }}
               variant="solid"
             >
