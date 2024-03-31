@@ -1,6 +1,6 @@
 # ai4Career - Personal Career Advisor 
 # 2nd Place in innovaite AINU x BAIC Hackathon
-
+![Example Image](images/loginui.png "Login UI")
 
 ## Overview
 
