@@ -39,7 +39,7 @@ function CardDisplay() {
     navigate(path);
   };
   let titlesWithDetails = [];
-
+  let goal = titlesDetails.details.length;
   const handleLogout = async () => {
     try {
       await signOut(auth);
@@ -154,7 +154,7 @@ function CardDisplay() {
 
       prev.disabled = true;
       next.disabled = true;
-      if (progress + 10 == 100) {
+      if (100 - (progress + 100 / goal) >= goal) {
         confetti({
           particleCount: 100,
           spread: 70,
@@ -163,14 +163,13 @@ function CardDisplay() {
 
         toast({
           title: "Congratulations!",
-          description:
-            "You've reached ten matches! 🎉 Keep up the good work! Feel free to keep swiping or take a break if you need to. ",
+          description: `You've reached ${goal} matches! 🎉 Keep up the good work! Feel free to keep swiping or take a break if you need to. `,
           status: "success",
           isClosable: true,
           duration: 10000,
         });
       }
-      setprogress((p) => p + 10);
+      setprogress((p) => p + 100 / goal);
     }
 
     let carouselInner = document.querySelector(".carousel-inner");
@@ -314,6 +313,8 @@ function CardDisplay() {
                       width: "60px",
                       height: "60px",
                       alignSelf: "center",
+                      backgroundColor: "red",
+                      borderRadius: 10,
                     }}
                     class="carousel-control-prev"
                     type="button"
@@ -333,6 +334,8 @@ function CardDisplay() {
                       width: "60px",
                       height: "60px",
                       alignSelf: "center",
+                      backgroundColor: "green",
+                      borderRadius: 10,
                     }}
                     class="carousel-control-next"
                     type="button"
