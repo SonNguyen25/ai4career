@@ -52,5 +52,11 @@ npm install
 # Start the server 
 npm start
 ```
-
+## Contributions
+Son Nguyen - Full Stack (Frontend, Backend, Database)
+Khoi Ngo - Backend
+Jonathan Sudarpo - Backend, Prompt Engineer
+Vidyut Ramanan - Frontend
+Yuxi Zhou - Designer
+Nikita Sopochkin - Presenter, Financial + Ethics Analyst
 
