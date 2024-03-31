@@ -21,9 +21,9 @@ AI4Career is a student for student project, it leverages cutting-edge AI technol
 
 ## Technical Stack
 
-- **Frontend**: [Specify technologies]
-- **Backend**: [Specify technologies]
-- **Database**: Firebase for data storage and user management
+- **Frontend**: React.js and JavaScript - Utilized for building a dynamic and responsive user interface that enhances user experience.
+- **Backend**: Node.js with Express.js - Employs Node.js as the runtime environment and Express.js for structuring the server-side logic, facilitating efficient data processing and API management.
+- **Database**: Firebase - Used for secure user authentication, real-time data storage, and user profile management.
 
 ## Project Setup
 
