@@ -99,7 +99,7 @@ const Questions = () => {
       console.error("Need to login");
     }
 
-    const bodyResponse = `Generate a list of all possible career path that best match this user profile:
+    const bodyResponse = `Generate a list of 20 possible career paths that best match this user profile:
         Name: ${profile.name}
         Major: ${profile.major}
         Skills: ${profile.skills}
@@ -130,7 +130,7 @@ const Questions = () => {
         // Create a new array with each item modified to include the additional phrase
         modifiedList = responseList.map(
           (item) =>
-            `Describe this job in more details. Speficially, we want three section. Firstly, describing the job details, secondly why the user profile is a great match for this role, and thirdly advice on which qualifications would be beneficial for pursuing this field: ${item}`
+            `Describe this job in more details. Speficially, we want three section. Firstly, describing the job details, secondly why the user profile is a great match for this role, and thirdly advice on which qualifications would be beneficial for pursuing this field: ${item}. The qualifications section should not be in bullet points but in sentences.`
         );
 
         // Map each modified item to a promise returned by axios.get (or axios.post, etc.)
@@ -169,14 +169,14 @@ const Questions = () => {
 
     makeRequests();
 
-    var responseImage = [];
+    // var responseImage = [];
 
-    const url = `http://localhost:4000/image`;
-    const responseIMG = await axios.post(url, {
-      message: "Man working in the software engineering",
-    });
+    // const url = `http://localhost:4000/image`;
+    // const responseIMG = await axios.post(url, {
+    //   message: "Man working in the software engineering",
+    // });
 
-    console.log(responseIMG);
+    // console.log(responseIMG);
   };
 
   if (showIntro) {
