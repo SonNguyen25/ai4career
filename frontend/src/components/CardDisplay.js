@@ -93,22 +93,27 @@ function CardDisplay() {
   }, []);
 
   function parseDescription(description) {
-    const parts = description.split(":").map(part => part.trim());
+    const parts = description.split(":").map((part) => part.trim());
 
     return {
-      jobDetails: parts.length > 1 ? parts[1].split("\n")[0].trim() : '',
-      userProfile: parts.length > 2 ? parts[2].split("\n")[0].trim() : '',
-      qualifications: parts.length > 3 ? parts[3].split("\n")[0].trim() : '',
+      jobDetails: parts.length > 1 ? parts[1].split("\n")[0].trim() : "",
+      userProfile: parts.length > 2 ? parts[2].split("\n")[0].trim() : "",
+      qualifications: parts.length > 3 ? parts[3].split("\n")[0].trim() : "",
     };
-}
-
+  }
 
   // Render function for the parsed description
   const renderDescription = (description) => (
     <>
-      <div><strong>Job Details:</strong> {description.jobDetails}</div>
-      <div><strong>User Profile Match:</strong> {description.userProfile}</div>
-      <div><strong>Qualifications:</strong> {description.qualifications}</div>
+      <div>
+        <strong>Job Details:</strong> {description.jobDetails}
+      </div>
+      <div>
+        <strong>User Profile Match:</strong> {description.userProfile}
+      </div>
+      <div>
+        <strong>Qualifications:</strong> {description.qualifications}
+      </div>
     </>
   );
 
@@ -179,7 +184,7 @@ function CardDisplay() {
 
       prev.disabled = true;
       next.disabled = true;
-      if (100 - (progress + 100 / goal) >= goal) {
+      if (progress + 10 == 100) {
         confetti({
           particleCount: 100,
           spread: 70,
@@ -188,13 +193,13 @@ function CardDisplay() {
 
         toast({
           title: "Congratulations!",
-          description: `You've reached ${goal} matches! 🎉 Keep up the good work! Feel free to keep swiping or take a break if you need to. `,
+          description: `You've reached 10 matches! 🎉 Keep up the good work! Feel free to keep swiping or take a break if you need to. `,
           status: "success",
           isClosable: true,
           duration: 10000,
         });
       }
-      setprogress((p) => p + 100 / goal);
+      setprogress((p) => p + 10);
     }
 
     let carouselInner = document.querySelector(".carousel-inner");
