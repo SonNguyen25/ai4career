@@ -53,10 +53,10 @@ npm install
 npm start
 ```
 ## Contributions
-Son Nguyen - Full Stack (Frontend, Backend, Database)
-Khoi Ngo - Backend
-Jonathan Sudarpo - Backend, Prompt Engineer
-Vidyut Ramanan - Frontend
-Yuxi Zhou - Designer
-Nikita Sopochkin - Presenter, Financial + Ethics Analyst
+- Son Nguyen - Full Stack (Frontend, Backend, Database)
+- Khoi Ngo - Backend
+- Jonathan Sudarpo - Backend, Prompt Engineer
+- Vidyut Ramanan - Frontend
+- Yuxi Zhou - Designer
+- Nikita Sopochkin - Presenter, Financial + Ethics Analyst
 
