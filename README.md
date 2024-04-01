@@ -20,7 +20,7 @@ AI4Career is a student for student project, it leverages cutting-edge AI technol
 - **Interactive Career Path Exploration**: Engages users with a swiping action - simulating a dating app, allowing them to explore various career and academic paths through interactive decision-making.
 - **Data Analysis and Visualization (Future Extensions)**: Employs advanced data processing techniques for insightful user profile analysis, showcased through interactive graphs and history tracking.
 - **Resource Hub**: Provides access to a curated collection of resources for personal development, academic planning, and career exploration.
-
+![Example Image](images/ui.png "UI")
 ## Technical Stack
 
 - **Frontend**: React.js and JavaScript - Utilized for building a dynamic and responsive user interface that enhances user experience.
