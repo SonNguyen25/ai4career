@@ -58,7 +58,7 @@ npm start
 - Son Nguyen - Full Stack (Frontend, Backend, Database)
 - Khoi Ngo - Backend, Prompt Engineer
 - Jonathan Sudarpo - Backend, Prompt Engineer
-- Vidyut Ramanan - Frontend
-- Yuxi Zhou - Designer
+- Vidyut Ramanan - Frontend, Presenter
+- Yuxi Zhou - Designer, Presenter
 - Nikita Sopochkin - Presenter, Financial + Ethics Analyst
 
