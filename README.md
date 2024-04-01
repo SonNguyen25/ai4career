@@ -56,7 +56,7 @@ npm start
 ```
 ## Contributions - Team AI4Good
 - Son Nguyen - Full Stack (Frontend, Backend, Database)
-- Khoi Ngo - Backend
+- Khoi Ngo - Backend, Prompt Engineer
 - Jonathan Sudarpo - Backend, Prompt Engineer
 - Vidyut Ramanan - Frontend
 - Yuxi Zhou - Designer
