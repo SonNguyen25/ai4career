@@ -54,7 +54,7 @@ npm install
 # Start the server 
 npm start
 ```
-## Contributions
+## Contributions - Team AI4Good
 - Son Nguyen - Full Stack (Frontend, Backend, Database)
 - Khoi Ngo - Backend
 - Jonathan Sudarpo - Backend, Prompt Engineer
