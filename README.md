@@ -17,7 +17,7 @@ AI4Career is a student for student project, it leverages cutting-edge AI technol
 - **User Authentication and Profile Management**: Implements Firebase for secure user authentication, enabling the creation and management of detailed user profiles.
 - **Survey-Driven Insights**: Customizable surveys/questionaires to understand user preferences, skills, and interests, aiding in the accurate personalization of career advice.
 - **Personalized Career Advice**: Utilizes AI to offer tailored career guidance, answering questions and providing recommendations based on individual user profiles.
-- **Interactive Career Path Exploration**: Engages users with a swiping action - based on dating app, allowing them to explore various career and academic paths through interactive decision-making.
+- **Interactive Career Path Exploration**: Engages users with a swiping action - simulating a dating app, allowing them to explore various career and academic paths through interactive decision-making.
 - **Data Analysis and Visualization (Future Extensions)**: Employs advanced data processing techniques for insightful user profile analysis, showcased through interactive graphs and history tracking.
 - **Resource Hub**: Provides access to a curated collection of resources for personal development, academic planning, and career exploration.
 
