@@ -4,7 +4,7 @@
 
 ## Overview
 
-AI4Career is a student for student project, it leverages cutting-edge AI technology to provide personalized, insightful career advice and academic planning support to students at crucial junctures of their educational journey. Targeted at high school students applying to university, first-year university students, and those uncertain about their career paths, AI4Career aims to demystify the process of making informed decisions regarding education and career.
+AI4Career is a student for student project, it leverages cutting-edge AI technology to provide personalized, insightful career advice and academic planning support to students at crucial pathways of their educational journey. Targeted at high school students applying to university, first-year university students, and those uncertain about their career paths, AI4Career aims to demystify the process of making informed decisions regarding education and career.
 
 ## Target Audience
 
